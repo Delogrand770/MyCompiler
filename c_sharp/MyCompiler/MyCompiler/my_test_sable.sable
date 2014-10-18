@@ -1,0 +1,131 @@
+Package comp5210;
+
+Helpers
+    digit = ['0' .. '9'] ;
+	posdigit = ['1' .. '9'];
+    ascii_char = [32 .. 127] ;
+    letter = [['a' .. 'z'] + ['A' .. 'Z']] ;
+	eol = 10|13 ; 
+	tab = 9;
+	star = 42;
+	exceptstar = 10 | 13 | 9 | [[32 .. 127] - [42 .. 42]];
+	exceptslashorstar = 10 | 13 | 9 | [[32 .. 127] - [42 + 47]];
+
+Tokens
+	whitespace = (' '|9|10|13)+;
+	comment = '//' ascii_char* eol|'/*' exceptstar* star+ (exceptslashorstar exceptstar* star+)* '/';
+	
+	rw_else = 'else';
+	rw_constant = 'const';
+	rw_function = 'function';
+	rw_return = 'return';
+	rw_main = 'main';
+	rw_if = 'if';
+	rw_while = 'while';
+	rw_for = 'for';
+
+	write = 'sout';
+
+	op_add = '+' | 'ADD';
+	op_divide = '/' | 'DIV';
+	op_subtract = '-' | 'SUB';
+	op_multiply = '*' | 'MULT';
+	op_mod = '%' | 'MOD';
+	
+	postfix_add = '++';
+	postfix_subtract = '--';
+
+	unary_not = '!' | 'NOT';
+
+	boolean_and = '&&' | 'AND';
+	boolean_or = '||' | 'OR';
+	boolean_equals = '=' | 'EQUALS';
+	boolean_compare_equals = '==' | 'ISEQUAL';
+	boolean_compare_isnotequals = '!=' | 'ISNOTEQUAL';
+	boolean_greater_equals = '>=' | 'ISGREATEREQUALS';
+	boolean_lesser_equals = '<=' | 'ISLESSEREQUALS';
+	boolean_greater_than = '>' | 'ISGREATER';
+	boolean_lesser_than = '<' | 'ISLESSER';
+
+	openparen = '(';
+	closeparen = ')';
+	openbrace = '{';
+	closebrace = '}';
+	openbracket = '[';
+	closebracket = ']';
+	semicolon = ';';
+	colon = ':';
+	period = '.';
+	comma = ',';
+	underscore = '_';
+	doublequote = '"';
+	
+	string = '"' ([32 .. 33] | [35 .. 91] | [93 .. 126] | (92 '"'))* '"'; 
+	integer = digit | posdigit digit*;
+	float = digit '.' digit+ | posdigit digit* '.' digit+ | digit* '.' digit+ ('e'|'E') '-'? posdigit digit*;
+	
+	id = letter ('_'? (letter | digit))*;
+
+IgnoredTokens
+	whitespace,
+	comment;
+	
+Productions
+	main = constants decs mainentry funcs;
+
+	constants = {ini} rw_constant id boolean_equals boolean_expression semicolon constants |
+				{declared} rw_constant id semicolon constants |
+				{none} ;
+
+	decs = {ini} [type]:id [var]:id boolean_equals boolean_expression semicolon decs |
+		   {declared} [type]:id [var]:id semicolon decs |
+		   {arrays} array_decs;
+
+	array_decs = {declared} [type]:id [var]:id openbracket boolean_expression closebracket semicolon decs | //var a[7];
+				 {ini} [type]:id [var]:id boolean_equals openbracket parameter closebracket semicolon decs | //var a = [1,2,3,4];
+				 {none} ;
+
+	literal = {integer} integer | {float} float | {id} id |
+			  {string} string | {array} array;
+
+	array = {array} id openbracket boolean_expression closebracket;
+
+	mainentry = rw_main colon rw_function openparen closeparen openbrace [statement]:statement closebrace;
+
+	funcs = id colon rw_function openparen [params]:parameter closeparen openbrace [statement]:statement closebrace funcs |
+			{none};
+
+	parameter = {param} literal comma parameter | {finalparam} literal parameter | {none};
+
+	if_stmnt = rw_if openparen [condition]:boolean_expression closeparen openbrace [statement]:statement closebrace;
+	while_stmnt = rw_while openparen [condition]:boolean_expression closeparen openbrace [statement]:statement closebrace;
+	for_stmnt = rw_for openparen [condition]:boolean_expression closeparen openbrace [statement]:statement closebrace;
+	func_call = [var]:id openparen [parameter]:parameter closeparen semicolon;
+	return_stmnt = {returnsomething} rw_return boolean_expression semicolon | {returnnothing} rw_return semicolon;
+
+	statement = {if} if_stmnt statement |
+				{while} while_stmnt statement |
+				{for} for_stmnt statement |
+				{funccall} func_call statement |
+				{return} return_stmnt statement |
+				{none};
+	
+	boolean_expression  = {or} boolean_expression boolean_or boolean_expression1 | boolean_expression1;
+	boolean_expression1 = {and} boolean_expression1 boolean_and boolean_expression2 | boolean_expression2;
+	boolean_expression2 = {compare_isnotequals} boolean_expression2 boolean_compare_isnotequals boolean_expression3 | boolean_expression3;
+	boolean_expression3 = {compare_equals} boolean_expression3 boolean_compare_equals boolean_expression4 | boolean_expression4;
+	boolean_expression4 = {greater_equals} boolean_expression4 boolean_greater_equals boolean_expression5 | boolean_expression5;
+	boolean_expression5 = {lesser_equals} boolean_expression5 boolean_lesser_equals boolean_expression6 | boolean_expression6;
+	boolean_expression6 = {greater_than} boolean_expression6 boolean_greater_than boolean_expression7 | boolean_expression7;
+	boolean_expression7 = {lesser_than} boolean_expression7 boolean_lesser_than math_expression | math_expression;
+
+	math_expression  = {expsubtract} math_expression op_subtract math_expression1 | math_expression1;
+	math_expression1 = {expadd} math_expression1 op_add math_expression2 | math_expression2;
+	math_expression2 = {expmod} math_expression2 op_mod math_expression3 | math_expression3;
+	math_expression3 = {expdivide} math_expression3 op_divide math_expression4 | math_expression4;
+	math_expression4 = {expmultiply} math_expression4 op_multiply math_expression5 | math_expression5;
+	math_expression5 = {unary_not} unary_not math_expression6 | math_expression6;
+	math_expression6 = {unary_negative} op_subtract math_expression7 | math_expression7;
+	math_expression7 = {postfix_subtract} math_expression7 postfix_subtract math_expression8 | math_expression8;
+	math_expression8 = {postfix_add} math_expression8 postfix_add math_expression9 | math_expression9;
+	math_expression9 = {expparen} openparen boolean_expression closeparen | literal;

@@ -1,0 +1,38 @@
+const a;
+const b = -1;
+
+var a;
+var b;
+var abc = !(true);
+var x = 10.577e-54;
+var y = "hello world";
+var xx = 5+5-4/3*(5%6);
+var a = [7];
+var a = [1, 2, 3];
+
+main:function(){
+	for (a==1){
+	}
+}
+test:function(){
+	while (true<1 && a>=4 || a<=6 || a>1 || a<1 || (a||b)){
+	}
+	test();
+	test(a, b, c);
+		return;
+}
+func:function(b){
+	if(a){}
+	while(a){}
+	//Single comment
+	/*
+		Multi
+		Line
+		Comment
+	*/
+	return true;
+}
+func:function(a, b, c){
+//multiple param 
+//following
+}

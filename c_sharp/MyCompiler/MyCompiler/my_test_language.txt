@@ -1,0 +1,97 @@
+//Integers
+-1
+100
+-100
+1
+
+//Floating points
+1.3
+-10.2
+1.44e-5
+-7.6e3
+
+//Operations
++ ADD
+- SUB
+* MULT
+/ DIV
+< ISLESSER
+> ISGREATER
+<= ISLESSEREQUALS
+>= ISGREATEREQUALS
+&& AND
+|| OR
+! NOT
+== ISEQUAL
+= EQUALS
+
+//Reserved words
+if
+else
+while
+method
+return
+
+//Symbols
+(
+)
+{
+}
+[
+]
+;
+.
+,
+_
+"
+
+//Strings
+""
+"asd"
+"123"
+"123asd"
+"asd123"
+"1234567890-=!@#$%^&*()_+qwertyuiop[]asdfghjkl;zxcvbnm,./QWERTYUIOP{}ASDFGHJKL:ZXCVBNM<>?\"`~"
+"hello \" world"
+
+//Variable declaration
+var test
+var t1
+var a
+var a1234
+
+//Constant decleration
+const test
+const t1
+const a
+const a1234
+
+//Invalid Integers
+--1
+100--
+
+//Invalid Floating points
+--1.3
+1.32--
+1.44e--5
+--7.6e3
+
+//Invalid Operations
++=
+-=
+-=-
+++
+--
+
+//Invalid Strings
+"asd
+asd"
+
+//Invalid Variables
+var 1a
+var a1a
+
+//Invalid Constants
+const 1a
+const a1a
+

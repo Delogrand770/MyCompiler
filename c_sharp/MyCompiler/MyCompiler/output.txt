@@ -1,0 +1,730 @@
+
+- AMain
+     |- ADeclaredConstants
+     |  |- const
+     |  |- a
+     |  |- ;
+     |  `- AIniConstants
+     |     |- const
+     |     |- b
+     |     |- =
+     |     |- ABooleanExpression
+     |     |  `- ABooleanExpression1
+     |     |     `- ABooleanExpression2
+     |     |        `- ABooleanExpression3
+     |     |           `- ABooleanExpression4
+     |     |              `- ABooleanExpression5
+     |     |                 `- ABooleanExpression6
+     |     |                    `- ABooleanExpression7
+     |     |                       `- AMathExpression
+     |     |                          `- AMathExpression1
+     |     |                             `- AMathExpression2
+     |     |                                `- AMathExpression3
+     |     |                                   `- AMathExpression4
+     |     |                                      `- AMathExpression5
+     |     |                                         `- AUnaryNegativeMathExpression6
+     |     |                                            |- -
+     |     |                                            `- AMathExpression7
+     |     |                                               `- AMathExpression8
+     |     |                                                  `- AMathExpression9
+     |     |                                                     `- AIntegerLiteral
+     |     |                                                        `- 1
+     |     `- ;
+     |     `- ANoneConstants
+     |- ADeclaredDecs
+     |  |- var
+     |  |- a
+     |  |- ;
+     |  `- ADeclaredDecs
+     |     |- var
+     |     |- b
+     |     |- ;
+     |     `- AIniDecs
+     |        |- var
+     |        |- abc
+     |        |- =
+     |        |- ABooleanExpression
+     |        |  `- ABooleanExpression1
+     |        |     `- ABooleanExpression2
+     |        |        `- ABooleanExpression3
+     |        |           `- ABooleanExpression4
+     |        |              `- ABooleanExpression5
+     |        |                 `- ABooleanExpression6
+     |        |                    `- ABooleanExpression7
+     |        |                       `- AMathExpression
+     |        |                          `- AMathExpression1
+     |        |                             `- AMathExpression2
+     |        |                                `- AMathExpression3
+     |        |                                   `- AMathExpression4
+     |        |                                      `- AUnaryNotMathExpression5
+     |        |                                         |- !
+     |        |                                         `- AMathExpression6
+     |        |                                            `- AMathExpression7
+     |        |                                               `- AMathExpression8
+     |        |                                                  `- AExpparenMathExpression9
+     |        |                                                     |- (
+     |        |                                                     |- ABooleanExpression
+     |        |                                                     |  `- ABooleanExpression1
+     |        |                                                     |     `- ABooleanExpression2
+     |        |                                                     |        `- ABooleanExpression3
+     |        |                                                     |           `- ABooleanExpression4
+     |        |                                                     |              `- ABooleanExpression5
+     |        |                                                     |                 `- ABooleanExpression6
+     |        |                                                     |                    `- ABooleanExpression7
+     |        |                                                     |                       `- AMathExpression
+     |        |                                                     |                          `- AMathExpression1
+     |        |                                                     |                             `- AMathExpression2
+     |        |                                                     |                                `- AMathExpression3
+     |        |                                                     |                                   `- AMathExpression4
+     |        |                                                     |                                      `- AMathExpression5
+     |        |                                                     |                                         `- AMathExpression6
+     |        |                                                     |                                            `- AMathExpression7
+     |        |                                                     |                                               `- AMathExpression8
+     |        |                                                     |                                                  `- AMathExpression9
+     |        |                                                     |                                                     `- AIdLiteral
+     |        |                                                     |                                                        `- true
+     |        |                                                     `- )
+     |        |- ;
+     |        `- AIniDecs
+     |           |- var
+     |           |- x
+     |           |- =
+     |           |- ABooleanExpression
+     |           |  `- ABooleanExpression1
+     |           |     `- ABooleanExpression2
+     |           |        `- ABooleanExpression3
+     |           |           `- ABooleanExpression4
+     |           |              `- ABooleanExpression5
+     |           |                 `- ABooleanExpression6
+     |           |                    `- ABooleanExpression7
+     |           |                       `- AMathExpression
+     |           |                          `- AMathExpression1
+     |           |                             `- AMathExpression2
+     |           |                                `- AMathExpression3
+     |           |                                   `- AMathExpression4
+     |           |                                      `- AMathExpression5
+     |           |                                         `- AMathExpression6
+     |           |                                            `- AMathExpression7
+     |           |                                               `- AMathExpression8
+     |           |                                                  `- AMathExpression9
+     |           |                                                     `- AFloatLiteral
+     |           |                                                        `- 10.577e-54
+     |           |- ;
+     |           `- AIniDecs
+     |              |- var
+     |              |- y
+     |              |- =
+     |              |- ABooleanExpression
+     |              |  `- ABooleanExpression1
+     |              |     `- ABooleanExpression2
+     |              |        `- ABooleanExpression3
+     |              |           `- ABooleanExpression4
+     |              |              `- ABooleanExpression5
+     |              |                 `- ABooleanExpression6
+     |              |                    `- ABooleanExpression7
+     |              |                       `- AMathExpression
+     |              |                          `- AMathExpression1
+     |              |                             `- AMathExpression2
+     |              |                                `- AMathExpression3
+     |              |                                   `- AMathExpression4
+     |              |                                      `- AMathExpression5
+     |              |                                         `- AMathExpression6
+     |              |                                            `- AMathExpression7
+     |              |                                               `- AMathExpression8
+     |              |                                                  `- AMathExpression9
+     |              |                                                     `- AStringLiteral
+     |              |                                                        `- "hello world"
+     |              |- ;
+     |              `- AIniDecs
+     |                 |- var
+     |                 |- xx
+     |                 |- =
+     |                 |- ABooleanExpression
+     |                 |  `- ABooleanExpression1
+     |                 |     `- ABooleanExpression2
+     |                 |        `- ABooleanExpression3
+     |                 |           `- ABooleanExpression4
+     |                 |              `- ABooleanExpression5
+     |                 |                 `- ABooleanExpression6
+     |                 |                    `- ABooleanExpression7
+     |                 |                       `- AExpsubtractMathExpression
+     |                 |                          |- AMathExpression
+     |                 |                          |  `- AExpaddMathExpression1
+     |                 |                          |     |- AMathExpression1
+     |                 |                          |     |  `- AMathExpression2
+     |                 |                          |     |     `- AMathExpression3
+     |                 |                          |     |        `- AMathExpression4
+     |                 |                          |     |           `- AMathExpression5
+     |                 |                          |     |              `- AMathExpression6
+     |                 |                          |     |                 `- AMathExpression7
+     |                 |                          |     |                    `- AMathExpression8
+     |                 |                          |     |                       `- AMathExpression9
+     |                 |                          |     |                          `- AIntegerLiteral
+     |                 |                          |     |                             `- 5
+     |                 |                          |     |- +
+     |                 |                          |     `- AMathExpression2
+     |                 |                          |        `- AMathExpression3
+     |                 |                          |           `- AMathExpression4
+     |                 |                          |              `- AMathExpression5
+     |                 |                          |                 `- AMathExpression6
+     |                 |                          |                    `- AMathExpression7
+     |                 |                          |                       `- AMathExpression8
+     |                 |                          |                          `- AMathExpression9
+     |                 |                          |                             `- AIntegerLiteral
+     |                 |                          |                                `- 5
+     |                 |                          |- -
+     |                 |                          `- AMathExpression1
+     |                 |                             `- AMathExpression2
+     |                 |                                `- AExpdivideMathExpression3
+     |                 |                                   |- AMathExpression3
+     |                 |                                   |  `- AMathExpression4
+     |                 |                                   |     `- AMathExpression5
+     |                 |                                   |        `- AMathExpression6
+     |                 |                                   |           `- AMathExpression7
+     |                 |                                   |              `- AMathExpression8
+     |                 |                                   |                 `- AMathExpression9
+     |                 |                                   |                    `- AIntegerLiteral
+     |                 |                                   |                       `- 4
+     |                 |                                   |- /
+     |                 |                                   `- AExpmultiplyMathExpression4
+     |                 |                                      |- AMathExpression4
+     |                 |                                      |  `- AMathExpression5
+     |                 |                                      |     `- AMathExpression6
+     |                 |                                      |        `- AMathExpression7
+     |                 |                                      |           `- AMathExpression8
+     |                 |                                      |              `- AMathExpression9
+     |                 |                                      |                 `- AIntegerLiteral
+     |                 |                                      |                    `- 3
+     |                 |                                      |- *
+     |                 |                                      `- AMathExpression5
+     |                 |                                         `- AMathExpression6
+     |                 |                                            `- AMathExpression7
+     |                 |                                               `- AMathExpression8
+     |                 |                                                  `- AExpparenMathExpression9
+     |                 |                                                     |- (
+     |                 |                                                     |- ABooleanExpression
+     |                 |                                                     |  `- ABooleanExpression1
+     |                 |                                                     |     `- ABooleanExpression2
+     |                 |                                                     |        `- ABooleanExpression3
+     |                 |                                                     |           `- ABooleanExpression4
+     |                 |                                                     |              `- ABooleanExpression5
+     |                 |                                                     |                 `- ABooleanExpression6
+     |                 |                                                     |                    `- ABooleanExpression7
+     |                 |                                                     |                       `- AMathExpression
+     |                 |                                                     |                          `- AMathExpression1
+     |                 |                                                     |                             `- AExpmodMathExpression2
+     |                 |                                                     |                                |- AMathExpression2
+     |                 |                                                     |                                |  `- AMathExpression3
+     |                 |                                                     |                                |     `- AMathExpression4
+     |                 |                                                     |                                |        `- AMathExpression5
+     |                 |                                                     |                                |           `- AMathExpression6
+     |                 |                                                     |                                |              `- AMathExpression7
+     |                 |                                                     |                                |                 `- AMathExpression8
+     |                 |                                                     |                                |                    `- AMathExpression9
+     |                 |                                                     |                                |                       `- AIntegerLiteral
+     |                 |                                                     |                                |                          `- 5
+     |                 |                                                     |                                |- %
+     |                 |                                                     |                                `- AMathExpression3
+     |                 |                                                     |                                   `- AMathExpression4
+     |                 |                                                     |                                      `- AMathExpression5
+     |                 |                                                     |                                         `- AMathExpression6
+     |                 |                                                     |                                            `- AMathExpression7
+     |                 |                                                     |                                               `- AMathExpression8
+     |                 |                                                     |                                                  `- AMathExpression9
+     |                 |                                                     |                                                     `- AIntegerLiteral
+     |                 |                                                     |                                                        `- 6
+     |                 |                                                     `- )
+     |                 |- ;
+     |                 `- AArraysDecs
+     |                    `- AIniArrayDecs
+     |                       |- var
+     |                       |- a
+     |                       |- =
+     |                       |- [
+     |                       |- AFinalparamParameter
+     |                       |  `- AIntegerLiteral
+     |                       |  |  `- 7
+     |                       |  `- ANoneParameter
+     |                       |- ]
+     |                       |- ;
+     |                       `- AArraysDecs
+     |                          `- AIniArrayDecs
+     |                             |- var
+     |                             |- a
+     |                             |- =
+     |                             |- [
+     |                             |- AParamParameter
+     |                             |  |- AIntegerLiteral
+     |                             |  |  `- 1
+     |                             |  |- ,
+     |                             |  `- AParamParameter
+     |                             |     |- AIntegerLiteral
+     |                             |     |  `- 2
+     |                             |     |- ,
+     |                             |     `- AFinalparamParameter
+     |                             |        `- AIntegerLiteral
+     |                             |        |  `- 3
+     |                             |        `- ANoneParameter
+     |                             |- ]
+     |                             `- ;
+     |                             `- AArraysDecs
+     |                                `- ANoneArrayDecs
+     |- AMainentry
+     |  |- main
+     |  |- :
+     |  |- function
+     |  |- (
+     |  |- )
+     |  |- {
+     |  |- AForStatement
+     |  |  `- AForStmnt
+     |  |  |  |- for
+     |  |  |  |- (
+     |  |  |  |- ABooleanExpression
+     |  |  |  |  `- ABooleanExpression1
+     |  |  |  |     `- ABooleanExpression2
+     |  |  |  |        `- ACompareEqualsBooleanExpression3
+     |  |  |  |           |- ABooleanExpression3
+     |  |  |  |           |  `- ABooleanExpression4
+     |  |  |  |           |     `- ABooleanExpression5
+     |  |  |  |           |        `- ABooleanExpression6
+     |  |  |  |           |           `- ABooleanExpression7
+     |  |  |  |           |              `- AMathExpression
+     |  |  |  |           |                 `- AMathExpression1
+     |  |  |  |           |                    `- AMathExpression2
+     |  |  |  |           |                       `- AMathExpression3
+     |  |  |  |           |                          `- AMathExpression4
+     |  |  |  |           |                             `- AMathExpression5
+     |  |  |  |           |                                `- AMathExpression6
+     |  |  |  |           |                                   `- AMathExpression7
+     |  |  |  |           |                                      `- AMathExpression8
+     |  |  |  |           |                                         `- AMathExpression9
+     |  |  |  |           |                                            `- AIdLiteral
+     |  |  |  |           |                                               `- a
+     |  |  |  |           |- ==
+     |  |  |  |           `- ABooleanExpression4
+     |  |  |  |              `- ABooleanExpression5
+     |  |  |  |                 `- ABooleanExpression6
+     |  |  |  |                    `- ABooleanExpression7
+     |  |  |  |                       `- AMathExpression
+     |  |  |  |                          `- AMathExpression1
+     |  |  |  |                             `- AMathExpression2
+     |  |  |  |                                `- AMathExpression3
+     |  |  |  |                                   `- AMathExpression4
+     |  |  |  |                                      `- AMathExpression5
+     |  |  |  |                                         `- AMathExpression6
+     |  |  |  |                                            `- AMathExpression7
+     |  |  |  |                                               `- AMathExpression8
+     |  |  |  |                                                  `- AMathExpression9
+     |  |  |  |                                                     `- AIntegerLiteral
+     |  |  |  |                                                        `- 1
+     |  |  |  |- )
+     |  |  |  `- {
+     |  |  |  |- ANoneStatement
+     |  |  |  `- }
+     |  |  `- ANoneStatement
+     |  `- }
+     `- AFuncs
+        |- test
+        |- :
+        |- function
+        `- (
+        |- ANoneParameter
+        |- )
+        |- {
+        |- AWhileStatement
+        |  |- AWhileStmnt
+        |  |  |- while
+        |  |  |- (
+        |  |  |- AOrBooleanExpression
+        |  |  |  |- AOrBooleanExpression
+        |  |  |  |  |- AOrBooleanExpression
+        |  |  |  |  |  |- AOrBooleanExpression
+        |  |  |  |  |  |  |- ABooleanExpression
+        |  |  |  |  |  |  |  `- AAndBooleanExpression1
+        |  |  |  |  |  |  |     |- ABooleanExpression1
+        |  |  |  |  |  |  |     |  `- ABooleanExpression2
+        |  |  |  |  |  |  |     |     `- ABooleanExpression3
+        |  |  |  |  |  |  |     |        `- ABooleanExpression4
+        |  |  |  |  |  |  |     |           `- ABooleanExpression5
+        |  |  |  |  |  |  |     |              `- ABooleanExpression6
+        |  |  |  |  |  |  |     |                 `- ALesserThanBooleanExpression7
+        |  |  |  |  |  |  |     |                    |- ABooleanExpression7
+        |  |  |  |  |  |  |     |                    |  `- AMathExpression
+        |  |  |  |  |  |  |     |                    |     `- AMathExpression1
+        |  |  |  |  |  |  |     |                    |        `- AMathExpression2
+        |  |  |  |  |  |  |     |                    |           `- AMathExpression3
+        |  |  |  |  |  |  |     |                    |              `- AMathExpression4
+        |  |  |  |  |  |  |     |                    |                 `- AMathExpression5
+        |  |  |  |  |  |  |     |                    |                    `- AMathExpression6
+        |  |  |  |  |  |  |     |                    |                       `- AMathExpression7
+        |  |  |  |  |  |  |     |                    |                          `- AMathExpression8
+        |  |  |  |  |  |  |     |                    |                             `- AMathExpression9
+        |  |  |  |  |  |  |     |                    |                                `- AIdLiteral
+        |  |  |  |  |  |  |     |                    |                                   `- true
+        |  |  |  |  |  |  |     |                    |- <
+        |  |  |  |  |  |  |     |                    `- AMathExpression
+        |  |  |  |  |  |  |     |                       `- AMathExpression1
+        |  |  |  |  |  |  |     |                          `- AMathExpression2
+        |  |  |  |  |  |  |     |                             `- AMathExpression3
+        |  |  |  |  |  |  |     |                                `- AMathExpression4
+        |  |  |  |  |  |  |     |                                   `- AMathExpression5
+        |  |  |  |  |  |  |     |                                      `- AMathExpression6
+        |  |  |  |  |  |  |     |                                         `- AMathExpression7
+        |  |  |  |  |  |  |     |                                            `- AMathExpression8
+        |  |  |  |  |  |  |     |                                               `- AMathExpression9
+        |  |  |  |  |  |  |     |                                                  `- AIntegerLiteral
+        |  |  |  |  |  |  |     |                                                     `- 1
+        |  |  |  |  |  |  |     |- &&
+        |  |  |  |  |  |  |     `- ABooleanExpression2
+        |  |  |  |  |  |  |        `- ABooleanExpression3
+        |  |  |  |  |  |  |           `- AGreaterEqualsBooleanExpression4
+        |  |  |  |  |  |  |              |- ABooleanExpression4
+        |  |  |  |  |  |  |              |  `- ABooleanExpression5
+        |  |  |  |  |  |  |              |     `- ABooleanExpression6
+        |  |  |  |  |  |  |              |        `- ABooleanExpression7
+        |  |  |  |  |  |  |              |           `- AMathExpression
+        |  |  |  |  |  |  |              |              `- AMathExpression1
+        |  |  |  |  |  |  |              |                 `- AMathExpression2
+        |  |  |  |  |  |  |              |                    `- AMathExpression3
+        |  |  |  |  |  |  |              |                       `- AMathExpression4
+        |  |  |  |  |  |  |              |                          `- AMathExpression5
+        |  |  |  |  |  |  |              |                             `- AMathExpression6
+        |  |  |  |  |  |  |              |                                `- AMathExpression7
+        |  |  |  |  |  |  |              |                                   `- AMathExpression8
+        |  |  |  |  |  |  |              |                                      `- AMathExpression9
+        |  |  |  |  |  |  |              |                                         `- AIdLiteral
+        |  |  |  |  |  |  |              |                                            `- a
+        |  |  |  |  |  |  |              |- >=
+        |  |  |  |  |  |  |              `- ABooleanExpression5
+        |  |  |  |  |  |  |                 `- ABooleanExpression6
+        |  |  |  |  |  |  |                    `- ABooleanExpression7
+        |  |  |  |  |  |  |                       `- AMathExpression
+        |  |  |  |  |  |  |                          `- AMathExpression1
+        |  |  |  |  |  |  |                             `- AMathExpression2
+        |  |  |  |  |  |  |                                `- AMathExpression3
+        |  |  |  |  |  |  |                                   `- AMathExpression4
+        |  |  |  |  |  |  |                                      `- AMathExpression5
+        |  |  |  |  |  |  |                                         `- AMathExpression6
+        |  |  |  |  |  |  |                                            `- AMathExpression7
+        |  |  |  |  |  |  |                                               `- AMathExpression8
+        |  |  |  |  |  |  |                                                  `- AMathExpression9
+        |  |  |  |  |  |  |                                                     `- AIntegerLiteral
+        |  |  |  |  |  |  |                                                        `- 4
+        |  |  |  |  |  |  |- ||
+        |  |  |  |  |  |  `- ABooleanExpression1
+        |  |  |  |  |  |     `- ABooleanExpression2
+        |  |  |  |  |  |        `- ABooleanExpression3
+        |  |  |  |  |  |           `- ABooleanExpression4
+        |  |  |  |  |  |              `- ALesserEqualsBooleanExpression5
+        |  |  |  |  |  |                 |- ABooleanExpression5
+        |  |  |  |  |  |                 |  `- ABooleanExpression6
+        |  |  |  |  |  |                 |     `- ABooleanExpression7
+        |  |  |  |  |  |                 |        `- AMathExpression
+        |  |  |  |  |  |                 |           `- AMathExpression1
+        |  |  |  |  |  |                 |              `- AMathExpression2
+        |  |  |  |  |  |                 |                 `- AMathExpression3
+        |  |  |  |  |  |                 |                    `- AMathExpression4
+        |  |  |  |  |  |                 |                       `- AMathExpression5
+        |  |  |  |  |  |                 |                          `- AMathExpression6
+        |  |  |  |  |  |                 |                             `- AMathExpression7
+        |  |  |  |  |  |                 |                                `- AMathExpression8
+        |  |  |  |  |  |                 |                                   `- AMathExpression9
+        |  |  |  |  |  |                 |                                      `- AIdLiteral
+        |  |  |  |  |  |                 |                                         `- a
+        |  |  |  |  |  |                 |- <=
+        |  |  |  |  |  |                 `- ABooleanExpression6
+        |  |  |  |  |  |                    `- ABooleanExpression7
+        |  |  |  |  |  |                       `- AMathExpression
+        |  |  |  |  |  |                          `- AMathExpression1
+        |  |  |  |  |  |                             `- AMathExpression2
+        |  |  |  |  |  |                                `- AMathExpression3
+        |  |  |  |  |  |                                   `- AMathExpression4
+        |  |  |  |  |  |                                      `- AMathExpression5
+        |  |  |  |  |  |                                         `- AMathExpression6
+        |  |  |  |  |  |                                            `- AMathExpression7
+        |  |  |  |  |  |                                               `- AMathExpression8
+        |  |  |  |  |  |                                                  `- AMathExpression9
+        |  |  |  |  |  |                                                     `- AIntegerLiteral
+        |  |  |  |  |  |                                                        `- 6
+        |  |  |  |  |  |- ||
+        |  |  |  |  |  `- ABooleanExpression1
+        |  |  |  |  |     `- ABooleanExpression2
+        |  |  |  |  |        `- ABooleanExpression3
+        |  |  |  |  |           `- ABooleanExpression4
+        |  |  |  |  |              `- ABooleanExpression5
+        |  |  |  |  |                 `- AGreaterThanBooleanExpression6
+        |  |  |  |  |                    |- ABooleanExpression6
+        |  |  |  |  |                    |  `- ABooleanExpression7
+        |  |  |  |  |                    |     `- AMathExpression
+        |  |  |  |  |                    |        `- AMathExpression1
+        |  |  |  |  |                    |           `- AMathExpression2
+        |  |  |  |  |                    |              `- AMathExpression3
+        |  |  |  |  |                    |                 `- AMathExpression4
+        |  |  |  |  |                    |                    `- AMathExpression5
+        |  |  |  |  |                    |                       `- AMathExpression6
+        |  |  |  |  |                    |                          `- AMathExpression7
+        |  |  |  |  |                    |                             `- AMathExpression8
+        |  |  |  |  |                    |                                `- AMathExpression9
+        |  |  |  |  |                    |                                   `- AIdLiteral
+        |  |  |  |  |                    |                                      `- a
+        |  |  |  |  |                    |- >
+        |  |  |  |  |                    `- ABooleanExpression7
+        |  |  |  |  |                       `- AMathExpression
+        |  |  |  |  |                          `- AMathExpression1
+        |  |  |  |  |                             `- AMathExpression2
+        |  |  |  |  |                                `- AMathExpression3
+        |  |  |  |  |                                   `- AMathExpression4
+        |  |  |  |  |                                      `- AMathExpression5
+        |  |  |  |  |                                         `- AMathExpression6
+        |  |  |  |  |                                            `- AMathExpression7
+        |  |  |  |  |                                               `- AMathExpression8
+        |  |  |  |  |                                                  `- AMathExpression9
+        |  |  |  |  |                                                     `- AIntegerLiteral
+        |  |  |  |  |                                                        `- 1
+        |  |  |  |  |- ||
+        |  |  |  |  `- ABooleanExpression1
+        |  |  |  |     `- ABooleanExpression2
+        |  |  |  |        `- ABooleanExpression3
+        |  |  |  |           `- ABooleanExpression4
+        |  |  |  |              `- ABooleanExpression5
+        |  |  |  |                 `- ABooleanExpression6
+        |  |  |  |                    `- ALesserThanBooleanExpression7
+        |  |  |  |                       |- ABooleanExpression7
+        |  |  |  |                       |  `- AMathExpression
+        |  |  |  |                       |     `- AMathExpression1
+        |  |  |  |                       |        `- AMathExpression2
+        |  |  |  |                       |           `- AMathExpression3
+        |  |  |  |                       |              `- AMathExpression4
+        |  |  |  |                       |                 `- AMathExpression5
+        |  |  |  |                       |                    `- AMathExpression6
+        |  |  |  |                       |                       `- AMathExpression7
+        |  |  |  |                       |                          `- AMathExpression8
+        |  |  |  |                       |                             `- AMathExpression9
+        |  |  |  |                       |                                `- AIdLiteral
+        |  |  |  |                       |                                   `- a
+        |  |  |  |                       |- <
+        |  |  |  |                       `- AMathExpression
+        |  |  |  |                          `- AMathExpression1
+        |  |  |  |                             `- AMathExpression2
+        |  |  |  |                                `- AMathExpression3
+        |  |  |  |                                   `- AMathExpression4
+        |  |  |  |                                      `- AMathExpression5
+        |  |  |  |                                         `- AMathExpression6
+        |  |  |  |                                            `- AMathExpression7
+        |  |  |  |                                               `- AMathExpression8
+        |  |  |  |                                                  `- AMathExpression9
+        |  |  |  |                                                     `- AIntegerLiteral
+        |  |  |  |                                                        `- 1
+        |  |  |  |- ||
+        |  |  |  `- ABooleanExpression1
+        |  |  |     `- ABooleanExpression2
+        |  |  |        `- ABooleanExpression3
+        |  |  |           `- ABooleanExpression4
+        |  |  |              `- ABooleanExpression5
+        |  |  |                 `- ABooleanExpression6
+        |  |  |                    `- ABooleanExpression7
+        |  |  |                       `- AMathExpression
+        |  |  |                          `- AMathExpression1
+        |  |  |                             `- AMathExpression2
+        |  |  |                                `- AMathExpression3
+        |  |  |                                   `- AMathExpression4
+        |  |  |                                      `- AMathExpression5
+        |  |  |                                         `- AMathExpression6
+        |  |  |                                            `- AMathExpression7
+        |  |  |                                               `- AMathExpression8
+        |  |  |                                                  `- AExpparenMathExpression9
+        |  |  |                                                     |- (
+        |  |  |                                                     |- AOrBooleanExpression
+        |  |  |                                                     |  |- ABooleanExpression
+        |  |  |                                                     |  |  `- ABooleanExpression1
+        |  |  |                                                     |  |     `- ABooleanExpression2
+        |  |  |                                                     |  |        `- ABooleanExpression3
+        |  |  |                                                     |  |           `- ABooleanExpression4
+        |  |  |                                                     |  |              `- ABooleanExpression5
+        |  |  |                                                     |  |                 `- ABooleanExpression6
+        |  |  |                                                     |  |                    `- ABooleanExpression7
+        |  |  |                                                     |  |                       `- AMathExpression
+        |  |  |                                                     |  |                          `- AMathExpression1
+        |  |  |                                                     |  |                             `- AMathExpression2
+        |  |  |                                                     |  |                                `- AMathExpression3
+        |  |  |                                                     |  |                                   `- AMathExpression4
+        |  |  |                                                     |  |                                      `- AMathExpression5
+        |  |  |                                                     |  |                                         `- AMathExpression6
+        |  |  |                                                     |  |                                            `- AMathExpression7
+        |  |  |                                                     |  |                                               `- AMathExpression8
+        |  |  |                                                     |  |                                                  `- AMathExpression9
+        |  |  |                                                     |  |                                                     `- AIdLiteral
+        |  |  |                                                     |  |                                                        `- a
+        |  |  |                                                     |  |- ||
+        |  |  |                                                     |  `- ABooleanExpression1
+        |  |  |                                                     |     `- ABooleanExpression2
+        |  |  |                                                     |        `- ABooleanExpression3
+        |  |  |                                                     |           `- ABooleanExpression4
+        |  |  |                                                     |              `- ABooleanExpression5
+        |  |  |                                                     |                 `- ABooleanExpression6
+        |  |  |                                                     |                    `- ABooleanExpression7
+        |  |  |                                                     |                       `- AMathExpression
+        |  |  |                                                     |                          `- AMathExpression1
+        |  |  |                                                     |                             `- AMathExpression2
+        |  |  |                                                     |                                `- AMathExpression3
+        |  |  |                                                     |                                   `- AMathExpression4
+        |  |  |                                                     |                                      `- AMathExpression5
+        |  |  |                                                     |                                         `- AMathExpression6
+        |  |  |                                                     |                                            `- AMathExpression7
+        |  |  |                                                     |                                               `- AMathExpression8
+        |  |  |                                                     |                                                  `- AMathExpression9
+        |  |  |                                                     |                                                     `- AIdLiteral
+        |  |  |                                                     |                                                        `- b
+        |  |  |                                                     `- )
+        |  |  |- )
+        |  |  `- {
+        |  |  |- ANoneStatement
+        |  |  `- }
+        |  `- AFunccallStatement
+        |     |- AFuncCall
+        |     |  |- test
+        |     |  `- (
+        |     |  |- ANoneParameter
+        |     |  |- )
+        |     |  `- ;
+        |     `- AFunccallStatement
+        |        |- AFuncCall
+        |        |  |- test
+        |        |  |- (
+        |        |  |- AParamParameter
+        |        |  |  |- AIdLiteral
+        |        |  |  |  `- a
+        |        |  |  |- ,
+        |        |  |  `- AParamParameter
+        |        |  |     |- AIdLiteral
+        |        |  |     |  `- b
+        |        |  |     |- ,
+        |        |  |     `- AFinalparamParameter
+        |        |  |        `- AIdLiteral
+        |        |  |        |  `- c
+        |        |  |        `- ANoneParameter
+        |        |  |- )
+        |        |  `- ;
+        |        `- AReturnStatement
+        |           `- AReturnnothingReturnStmnt
+        |           |  |- return
+        |           |  `- ;
+        |           `- ANoneStatement
+        |- }
+        `- AFuncs
+           |- func
+           |- :
+           |- function
+           |- (
+           |- AFinalparamParameter
+           |  `- AIdLiteral
+           |  |  `- b
+           |  `- ANoneParameter
+           |- )
+           |- {
+           |- AIfStatement
+           |  |- AIfStmnt
+           |  |  |- if
+           |  |  |- (
+           |  |  |- ABooleanExpression
+           |  |  |  `- ABooleanExpression1
+           |  |  |     `- ABooleanExpression2
+           |  |  |        `- ABooleanExpression3
+           |  |  |           `- ABooleanExpression4
+           |  |  |              `- ABooleanExpression5
+           |  |  |                 `- ABooleanExpression6
+           |  |  |                    `- ABooleanExpression7
+           |  |  |                       `- AMathExpression
+           |  |  |                          `- AMathExpression1
+           |  |  |                             `- AMathExpression2
+           |  |  |                                `- AMathExpression3
+           |  |  |                                   `- AMathExpression4
+           |  |  |                                      `- AMathExpression5
+           |  |  |                                         `- AMathExpression6
+           |  |  |                                            `- AMathExpression7
+           |  |  |                                               `- AMathExpression8
+           |  |  |                                                  `- AMathExpression9
+           |  |  |                                                     `- AIdLiteral
+           |  |  |                                                        `- a
+           |  |  |- )
+           |  |  `- {
+           |  |  |- ANoneStatement
+           |  |  `- }
+           |  `- AWhileStatement
+           |     |- AWhileStmnt
+           |     |  |- while
+           |     |  |- (
+           |     |  |- ABooleanExpression
+           |     |  |  `- ABooleanExpression1
+           |     |  |     `- ABooleanExpression2
+           |     |  |        `- ABooleanExpression3
+           |     |  |           `- ABooleanExpression4
+           |     |  |              `- ABooleanExpression5
+           |     |  |                 `- ABooleanExpression6
+           |     |  |                    `- ABooleanExpression7
+           |     |  |                       `- AMathExpression
+           |     |  |                          `- AMathExpression1
+           |     |  |                             `- AMathExpression2
+           |     |  |                                `- AMathExpression3
+           |     |  |                                   `- AMathExpression4
+           |     |  |                                      `- AMathExpression5
+           |     |  |                                         `- AMathExpression6
+           |     |  |                                            `- AMathExpression7
+           |     |  |                                               `- AMathExpression8
+           |     |  |                                                  `- AMathExpression9
+           |     |  |                                                     `- AIdLiteral
+           |     |  |                                                        `- a
+           |     |  |- )
+           |     |  `- {
+           |     |  |- ANoneStatement
+           |     |  `- }
+           |     `- AReturnStatement
+           |        `- AReturnsomethingReturnStmnt
+           |        |  |- return
+           |        |  |- ABooleanExpression
+           |        |  |  `- ABooleanExpression1
+           |        |  |     `- ABooleanExpression2
+           |        |  |        `- ABooleanExpression3
+           |        |  |           `- ABooleanExpression4
+           |        |  |              `- ABooleanExpression5
+           |        |  |                 `- ABooleanExpression6
+           |        |  |                    `- ABooleanExpression7
+           |        |  |                       `- AMathExpression
+           |        |  |                          `- AMathExpression1
+           |        |  |                             `- AMathExpression2
+           |        |  |                                `- AMathExpression3
+           |        |  |                                   `- AMathExpression4
+           |        |  |                                      `- AMathExpression5
+           |        |  |                                         `- AMathExpression6
+           |        |  |                                            `- AMathExpression7
+           |        |  |                                               `- AMathExpression8
+           |        |  |                                                  `- AMathExpression9
+           |        |  |                                                     `- AIdLiteral
+           |        |  |                                                        `- true
+           |        |  `- ;
+           |        `- ANoneStatement
+           |- }
+           `- AFuncs
+              |- func
+              |- :
+              |- function
+              |- (
+              |- AParamParameter
+              |  |- AIdLiteral
+              |  |  `- a
+              |  |- ,
+              |  `- AParamParameter
+              |     |- AIdLiteral
+              |     |  `- b
+              |     |- ,
+              |     `- AFinalparamParameter
+              |        `- AIdLiteral
+              |        |  `- c
+              |        `- ANoneParameter
+              |- )
+              `- {
+              |- ANoneStatement
+              `- }
+              `- ANoneFuncs
+

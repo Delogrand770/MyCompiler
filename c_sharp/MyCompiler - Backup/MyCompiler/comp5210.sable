@@ -1,0 +1,58 @@
+Package comp5210;
+
+Helpers
+    digit = ['0' .. '9'] ;
+    ascii_char = [32 .. 127] ;
+    letter = [['a' .. 'z'] + ['A' .. 'Z']] ;
+	eol = 10|13 ; 
+
+Tokens
+	if = 'if';
+	else = 'else';
+	while = 'while';
+	method = 'method';
+	return = 'return';
+	
+	constant = 'const ' letter+ digit*;
+	variable = 'var ' letter+ digit*;
+	whitespace = (' '|9|10|13)+;
+	comment = '//' ascii_char* eol|'/*' ascii_char* '*/';
+	integer = '-'? digit+;
+	float = '-'? digit+ '.' digit+ | ('-'? digit+ '.' digit+ 'e'? '-'? digit+);
+	string = '"' ([32 .. 33] | [35 .. 91] | [93 .. 126] | (92 '"'))* '"'; 
+
+	add = '+' | 'ADD';
+	subtract = '-' | 'SUB';
+	multiply = '*' | 'MULT';
+	divide = '/' | 'DIV';
+	and = '&&' | 'AND';
+	or = '||' | 'OR';
+	not = '!' | 'NOT';
+	equals = '=' | 'EQUALS';
+	compare_equals = '==' | 'ISEQUAL';
+	greater_equals = '>=' | 'ISGREATEREQUALS';
+	lesser_equals = '<=' | 'ISLESSEREQUALS';
+	greater_than = '>' | 'ISGREATER';
+	less_than = '<' | 'ISLESSER';
+
+	lparen = '(';
+	rparen = ')';
+	lbrace = '{';
+	rbrace = '}';
+	lbracket = '[';
+	rbracket = ']';
+	semicolon = ';';
+	colon = ':';
+	period = '.';
+	comma = ',';
+	underscore = '_';
+	doublequote = '"';
+	
+	letters = letter+;
+
+IgnoredTokens
+	whitespace, 
+	comment;
+	
+Productions
+	fred = period;
